@@ -1,23 +1,2 @@
-body{
-  background-color: #666;
-  p{
-    background-color: #666;;
-  }
-
-  span{
-    background-color: blue;
-  }
-
-  div{
-    padding: 20px 20px;
-  }
-}
-
-a{
-  color: orange;
-
-}
-
-section{
-  margin-top: auto;
-}
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
