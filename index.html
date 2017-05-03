@@ -44,7 +44,7 @@
   </nav>
 
   <section class="showcase">
-    <div class="container">
+    <div class="container wow bounceIn" data-wow-duration="2s">
       <h1>Got Ideas?</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
         dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -55,19 +55,19 @@
   <section class="features">
     <div class="container">
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-4 wow bounceInLeft" data-wow-delay=".6s">
           <i class="fa fa-html5"></i>
           <h3>Clean and Simple Code</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderi</p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 wow pulse" data-wow-delay="1.2s">
           <i class="fa fa-gear"></i>
           <h3>Sass Pretty</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderi</p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 wow bounceInRight" data-wow-delay=".6s">
           <i class="fa fa-lightbulb-o"></i>
           <h3>Customizable</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -146,13 +146,13 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-8 col-sm-offset-2">
-          <h2>Subscribe to our newsletter</h2>
+          <h2 class="wow rollIn" data-wow-duration="2s">Subscribe to our newsletter</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia iusto odit obcaecati aliquam earum quis dolores, sequi aspernatur dignissimos. Eveniet optio ab earum eaque at sunt assumenda quibusdam laudantium architecto!</p>
           <hr/>
           <form>
-            <input type="email" class="form-control" placeholder="Enter Email" required>
+            <input type="email" class="form-control wow zoomInUp" data-wow-duration="1s" placeholder="Enter Email" required>
             <br />
-            <button type="button" class="btn btn-primary btn-block">Subscribe Now!</button>
+            <button type="button" class="btn btn-primary btn-block wow bounce" data-wow-duration="2.6s">Subscribe Now!</button>
           </form>
         </div>
       </div>
@@ -173,7 +173,27 @@
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+
+  <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
+  <script src="bower_components/wow/dist/wow.js"></script>
+  <script src="bower_components/scrollspy/build/scrollspy.js"></script>
+  <script>
+    new WOW().init();
+
+    $('.wow').on('scrollSpy:exit', function() {
+      var element = $(this);
+      element.css({
+        'visibility': 'hidden',
+        'animation-name': 'none'
+      }).removeClass('animated');
+      wow.addBox(this);
+    });
+
+    WOW.prototype.addBox = function(element) {
+      this.boxes.push(element);
+    };
+  </script>
+
 </body>
 
 </html>
