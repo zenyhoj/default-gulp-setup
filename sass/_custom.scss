@@ -1,6 +1,11 @@
 html{
   font-family: $font-family-base;
 }
+
+body { 
+  padding-top: 70px; 
+}
+
 .navbar {
   margin-bottom: 0;
   a{
@@ -85,4 +90,34 @@ footer{
   padding-bottom: 10px;
   border-bottom: 4px solid $main-color;
 
+}
+
+//nav social
+.nav-social-facebook{
+  &:hover{
+    color: #3b5998;
+  }
+}
+
+.nav-social-twitter{
+  &:hover{
+  color: #55acee;
+  }
+}
+
+.nav-social-gplus{
+   &:hover{
+    color: #db4b39;
+   }
+
+}
+
+//footer
+.core-team{
+  color: #f7ec9b;
+  
+  &:hover{
+    color: $main-color;
+    text-decoration: none;
+  }
 }

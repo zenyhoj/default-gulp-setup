@@ -10513,6 +10513,9 @@ button.close {
 html {
   font-family: "Montserrat", sans-serif; }
 
+body {
+  padding-top: 70px; }
+
 .navbar {
   margin-bottom: 0; }
   .navbar a {
@@ -10573,3 +10576,18 @@ footer {
   background: url(../img/showcase-bg.jpg) no-repeat 0 -300px;
   padding-bottom: 10px;
   border-bottom: 4px solid #337ab7; }
+
+.nav-social-facebook:hover {
+  color: #3b5998; }
+
+.nav-social-twitter:hover {
+  color: #55acee; }
+
+.nav-social-gplus:hover {
+  color: #db4b39; }
+
+.core-team {
+  color: #f7ec9b; }
+  .core-team:hover {
+    color: #337ab7;
+    text-decoration: none; }
